@@ -1,17 +1,15 @@
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const carousel = document.querySelector(".carousel");
-    const carouselInner = document.querySelector(".carousel-inner");
-    const items = document.querySelectorAll(".carousel-item");
-    const prevBtn = document.querySelector(".prev");
-    const nextBtn = document.querySelector(".next");
-    const indicatorsContainer = document.querySelector(".carousel-indicators");
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".carousel").forEach((carousel) => {
+    const carouselInner = carousel.querySelector(".carousel-inner");
+    const items = carousel.querySelectorAll(".carousel-item");
+    const prevBtn = carousel.querySelector(".prev");
+    const nextBtn = carousel.querySelector(".next");
+    const indicatorsContainer = carousel.querySelector(".carousel-indicators");
 
     let currentIndex = 0;
     const totalItems = items.length;
     let timer;
 
-  
     for (let i = 0; i < totalItems; i++) {
       const indicator = document.createElement("button");
       indicator.classList.add("carousel-indicator");
@@ -20,7 +18,7 @@
       indicatorsContainer.appendChild(indicator);
     }
 
-    const indicators = document.querySelectorAll(".carousel-indicator");
+    const indicators = carousel.querySelectorAll(".carousel-indicator");
 
     function updateCarousel() {
       carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
@@ -43,7 +41,6 @@
       updateCarousel();
     }
 
-    
     function startAutoSlide() {
       timer = setInterval(nextSlide, 3000);
     }
@@ -52,7 +49,6 @@
       clearInterval(timer);
     }
 
-  
     nextBtn.addEventListener("click", () => {
       stopAutoSlide();
       nextSlide();
@@ -70,4 +66,5 @@
 
     startAutoSlide();
   });
+});
 

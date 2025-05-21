@@ -86,3 +86,153 @@
         width: 100%;
     }
 }
+
+@media screen and (min-width: 300px) and (max-width: 1024px) {
+    .pc {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+        background-color: #592390;
+        min-height: 100vh;
+    }
+
+    .page-wrapper {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .page-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 10px;
+        background-color: #34116E;
+    }
+
+    .page-header img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .page-header .cart img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .search-box {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        margin: 0 auto;
+        height: 60px;
+    }
+
+    .search-title {
+        color: white;
+        text-align: center;
+        font-size: 30px;
+        line-height: 70px;
+    }
+
+    .search-box input {
+        height: 100%;
+        padding-left: 20px;
+        border-radius: 20px;
+        font-size: 20px;
+        background-color: #FDBF83;
+    }
+
+    .search-box img {
+        width: 40px;
+        position: absolute;
+        right: 20px;
+        top: 12px;
+    }
+
+    .load-more {
+        width: 80%;
+        margin: 0 auto;
+        height: 50px;
+        line-height: 50px;
+        margin-top: 10px;
+        border-radius: 12px;
+        text-align: center;
+        font-size: 30px;
+        color: #3B1672;
+        background-color: #EDA1E9;
+        font-weight: 700;
+    }
+
+    .aside {
+        z-index: 10;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        height: 100vh;
+        width: 46%;
+        background-color: #5D2597;
+    }
+
+    .clone {
+        height: 76px;
+        padding: 10px;
+        box-sizing: border-box;
+        background-color: #34116E;
+    }
+
+    .clone img {
+        width: 40px;
+    }
+
+    .aside nav {
+        padding: 10px;
+    }
+
+    .aside nav li a {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .aside nav li a {
+        color: white;
+        font-weight: 600;
+        font-size: 22px;
+    }
+
+    .aside nav li a span:last-child {
+        font-size: 30px;
+    }
+
+    input {
+        border: 0;
+        width: 100%;
+    }
+}
+
+
+.add-cart,
+.subtract,
+.add,
+.remove {
+    cursor: pointer;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+ul,
+li {
+    list-style: none;
+}

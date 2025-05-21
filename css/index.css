@@ -111,3 +111,37 @@
 .carousel-indicator.active {
     background: rgba(255,255,255,1);
 }
+
+@media screen and (min-width: 300px) and (max-width: 1024px) {
+
+    .carousel-item {
+        height: 300px;
+    }
+
+    .active-moudles {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 40px;
+    }
+
+    .moudle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 46%;
+        height: 80px;
+        margin-bottom: 10px;
+        background-color: #F46969;
+        border: 5px solid #4D1F56;
+        border-radius: 20px;
+        color: #FDCC44;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .moudle img {
+        width: 36px;
+    }
+}
