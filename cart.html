@@ -1,11 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cart</title>
+  <link rel="stylesheet" href="./css/res.css" />
 </head>
 <body>
-    
+
+  <div class="pc">
+    <div class="page-header">
+      <div class="title">Minotaur</div>
+      <div class="cart">
+        <a href="cart.html"><img src="/imgs/shopping-cart.png" alt="cart" /></a>
+      </div>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="">Blog</a></li>
+        <li><a href="">Postage</a></li>
+        <li><a href="">Help/FAQ</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">Login</a></li>
+      </ul>
+    </nav>
+
+    <div class="page-content">
+      <div class="page-wrapper">
+        <div class="search">
+          <input type="text" placeholder="Search..." />
+          <a href="productList.html"><img src="/imgs/search.png" alt="search" /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="mobile">
+    <div class="page-header">
+      <div class="popup">
+        <img src="/imgs/menu.png" alt="" class="openIcon" />
+      </div>
+      <div class="cart">
+        <a href="cart.html"><img src="/imgs/shopping-cart.png" alt="" /></a>
+      </div>
+    </div>
+
+    <div class="page-content">
+      <div class="page-wrapper">
+        <div class="search">
+          <div class="search-title">Minotaur</div>
+          <div class="search-box">
+            <input type="text" placeholder="Search..." />
+            <a href="productList.html"><img src="/imgs/search.png" alt="" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="aside">
+      <div class="close">
+        <img src="/imgs/close.png" alt="" class="closeIcon" />
+      </div>
+      <nav>
+        <li><a href="index.html"><span>Home</span> <span>></span></a></li>
+        <li><a href=""><span>Blog</span> <span>></span></a></li>
+        <li><a href=""><span>Postage</span> <span>></span></a></li>
+        <li><a href=""><span>Help/FAQ</span> <span>></span></a></li>
+        <li><a href=""><span>Contact</span> <span>></span></a></li>
+        <li><a href=""><span>Login</span> <span>></span></a></li>
+      </nav>
+    </div>
+  </div>
+
+
+  <script src="./js/res.js"></script>
 </body>
 </html>

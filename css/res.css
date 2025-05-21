@@ -221,8 +221,7 @@
 
 .add-cart,
 .subtract,
-.add,
-.remove{
+.add{
     cursor: pointer;
 }
 
