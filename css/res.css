@@ -168,23 +168,24 @@
 
     .aside {
         z-index: 10;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         display: none;
         height: 100vh;
         width: 46%;
         background-color: #5D2597;
+        transition: left 0.3s ease;
     }
 
-    .clone {
+    .close {
         height: 76px;
         padding: 10px;
         box-sizing: border-box;
         background-color: #34116E;
     }
 
-    .clone img {
+    .close img {
         width: 40px;
     }
 
@@ -221,7 +222,7 @@
 .add-cart,
 .subtract,
 .add,
-.remove {
+.remove{
     cursor: pointer;
 }
 
@@ -235,4 +236,10 @@ a {
 ul,
 li {
     list-style: none;
+}
+.closeIcon {
+  cursor: pointer;
+}
+.openIcon {
+  cursor: pointer;
 }
