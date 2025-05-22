@@ -1,93 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>productList</title>
-    <link rel="stylesheet" href="./css/res.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>productList</title>
+  <link rel="stylesheet" href="./css/res.css" />
+  <link rel="stylesheet" href="./css/productList.css" />
 </head>
 <body>
-    <div class=" productList pc">
+  <div class="productList pc">
     <div class="page-header">
       <div class="title">Minotaur</div>
-      <div class="cart"><a href="cart.html"><img src="/imgs/shopping-cart.png" alt="cart"></a></div>
+      <div class="cart">
+        <a href="cart.html"><img src="/imgs/shopping-cart.png" alt="cart" /></a>
+      </div>
     </div>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="">Blog</a></li>
-        <li><a href="">Postage</a></li>
-        <li><a href="">Help/FAQ</a></li>
+        <li><a href="">Toys</a></li>
+        <li><a href="">Books</a></li>
+        <li><a href="">Videos</a></li>
+        <li><a href="">Games</a></li>
         <li><a href="">Contact</a></li>
-        <li><a href="">Login</a></li>
       </ul>
     </nav>
     <div class="page-content">
       <div class="page-wrapper">
         <div class="search">
-          <input type="text" placeholder="Search..." name="" id="">
-          <a href="productList.html"><img src="/imgs/search.png" alt="search"></a>
+          <input type="text" placeholder="Search..." />
+          <a href="productList.html"><img src="/imgs/search.png" alt="search" /></a>
         </div>
       </div>
+      <div class="goods-filter">
+        <div class="filter">
+          <div class="title">Filters</div>
+          <div class="silder"><img src="" alt="" /></div>
+          <div class="content">
+            <div class="price-slider">
+              <label for="priceRange" class="slider-label">Price Range</label>
+              <div class="range-values">
+                <span id="minPrice">$0</span>
+                <input type="range" min="0" max="1000" value="200" id="minRange" />
+                <input type="range" min="0" max="1000" value="800" id="maxRange" />
+                <span id="maxPrice">$1000</span>
+              </div>
+            </div>
+
+            <li><input type="checkbox" /><span>Anime Figures</span></li>
+            <li><input type="checkbox" /><span>Gaming Merch</span></li>
+            <li><input type="checkbox" /><span>Limited Editions</span></li>
+            <li><input type="checkbox" /><span>Posters & Art</span></li>
+            <li><input type="checkbox" /><span>Collectibles</span></li>
+            <li><input type="checkbox" /><span>Trading Cards</span></li>
+            <li><input type="checkbox" /><span>Accessories</span></li>
+            <li><input type="checkbox" /><span>Vinyl Records</span></li>
+            <li><input type="checkbox" /><span>Plush Toys</span></li>
+            <li><input type="checkbox" /><span>Manga & Comics</span></li>
+            <li><input type="checkbox" /><span>Digital Downloads</span></li>
+
+            <div class="apply-btn">
+              <button type="button">Apply Filters</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="results">
+          <div class="title">Results:4 products</div>
+          <div class="goods-body">
+            <a class="item" href="">
+              <div class="top-img"><img src="/imgs/switch(1).jpg" alt="" /></div>
+              <div class="bottom-content">
+                <div class="name">Nintendo Switch</div>
+                <div class="price">Price: $539.99</div>
+                <div class="status">Out of stock</div>
+              </div>
+            </a>
+            <a class="item" href="alarmo.html">
+              <div class="top-img"><img src="/imgs/alarmo(1).jpg" alt="" /></div>
+              <div class="bottom-content">
+                <div class="name">Nintendo alarmo</div>
+                <div class="price">Price: $159.99</div>
+                <div class="status green">In stock</div>
+              </div>
+            </a>
+            <a class="item" href="digivice.html">
+              <div class="top-img"><img src="/imgs/digivice(1).jpg" alt="" /></div>
+              <div class="bottom-content">
+                <div class="name">Digivice-25th</div>
+                <div class="price">Price: $259.99</div>
+                <div class="status green">In stock</div>
+              </div>
+            </a>
+            <a class="item" href="">
+              <div class="top-img"><img src="/imgs/night(1).jpg" alt="" /></div>
+              <div class="bottom-content">
+                <div class="name">Witch on the Holy Night</div>
+                <div class="price">Price: $99.99</div>
+                <div class="status">Out of stock</div>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
+      <div class="load-more">Load more...</div>
     </div>
-    
-    
+  </div>
+
   <div class="productList mobile">
-        <div class="page-header">
-            <div class="popup"><img src="/imgs/menu.png" alt="" class="openIcon"></div>
-            <div class="cart"><a href="cart.html"><img src="/imgs/shopping-cart.png" alt=""></a></div>
-        </div>
-        <div class="page-content">
-            <div class="page-wrapper">
-                <div class="search">
-                    <div class="search-title">Minotaur</div>
-                    <div class="search-box">
-                        <input type="text" placeholder="Search..." name="" id="">
-                        <a href="productList.html"><img src="/imgs/search.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-            <div class="goods-filter">
-                <div class="results">
-                    <div class="title">Results:4 products</div>
-                    <div class="filter" >
-                        <div class="left" id="filters">
-                            <span>Filters</span>
-                            <img src="" alt="">
-                        </div>
-                        <div class="right">
-                            <span>Sort options</span>
-                            <img src="" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="load-more">
-                Load more...
-            </div>
-            <div class="aside">
-                <div class="close"><img src="/imgs/close.png" alt="" class="closeIcon"></div>
-                <nav>
-                    <li><a href="index.html"><span>Home</span> <span>></span></a></li>
-                    <li><a href=""><span>Blog</span> <span>></span></a></li>
-                    <li><a href=""><span>Postage</span> <span>></span></a></li>
-                    <li><a href=""><span>Help/FAQ</span> <span>></span></a></li>
-                    <li><a href=""><span>Contact</span> <span>></span></a></li>
-                    <li><a href=""><span>Login</span> <span>></span></a></li>
-                </nav>
-            </div>
-            <div class="filAside aside">
-                <div class="close"><img src="/imgs/close.png" alt="" class="closeIcon1"></div>
-                <nav>
-                    <li><a href="goods.html"><span>Product</span> <span>></span></a></li>
-                    <li><a href=""><span>Brand</span> <span>></span></a></li>
-                    <li><a href=""><span>Color</span> <span>></span></a></li>
-                    <li><a href=""><span>Availability</span> <span>></span></a></li>
-                </nav>
-            </div>
-        </div>
+    <div class="page-header">
+      <div class="popup"><img src="/imgs/menu.png" alt="" class="openIcon" /></div>
+      <div class="cart"><a href="cart.html"><img src="/imgs/shopping-cart(1).png" alt="" /></a></div>
     </div>
-    <script src="./js/res.js"></script>
+    <div class="page-content">
+      <div class="page-wrapper">
+        <div class="search">
+          <div class="search-title">Minotaur</div>
+          <div class="search-box">
+            <input type="text" placeholder="Search..." />
+            <a href="productList.html"><img src="/imgs/search.png" alt="" /></a>
+          </div>
+        </div>
+      </div>
+      <div class="goods-filter">
+        <div class="results">
+          <div class="title">Results:4 products</div>
+          <div class="filter">
+            <div class="left" id="filters">
+              <span>Filters</span>
+              <img src="/imgs/filter.png" alt="" />
+            </div>
+            <div class="right">
+              <span>Sort options</span>
+              <img src="/imgs/arrow-down-sign-to-navigate.png" alt="" />
+            </div>
+          </div>
+          <div class="goods-body">
+            <a class="item" href="">
+              <div class="top-img"><img src="/imgs/switch(1).jpg" alt="" /></div>
+              <div class="bottom-content">
+                <div class="name">Nintendo Switch</div>
+                <div class="price">Price: $539.99</div>
+                <div class="status">Out of stock</div>
+              </div>
+            </a>
+            <a class="item" href="alarmo.html">
+              <div class="top-img"><img src="/imgs/alarmo(1).jpg" alt="" /></div>
+              <div class="bottom-content">
+                <div class="name">Nintendo alarmo</div>
+                <div class="price">Price: $159.99</div>
+                <div class="status green">In stock</div>
+              </div>
+            </a>
+            <a class="item" href="digivice.html">
+              <div class="top-img"><img src="/imgs/digivice(1).jpg" alt="" /></div>
+              <div class="bottom-content">
+                <div class="name">Digivice-25th</div>
+                <div class="price">Price: $259.99</div>
+                <div class="status green">In stock</div>
+              </div>
+            </a>
+            <a class="item" href="">
+              <div class="top-img"><img src="/imgs/night(1).jpg" alt="" /></div>
+              <div class="bottom-content">
+                <div class="name">Witch on the Holy Night</div>
+                <div class="price">Price: $99.99</div>
+                <div class="status">Out of stock</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="load-more">Load more...</div>
+      <div class="aside">
+        <div class="close"><img src="/imgs/close.png" alt="" class="closeIcon" /></div>
+        <nav>
+          <li><a href="index.html"><span>Home</span> <span>></span></a></li>
+          <li><a href=""><span>Blog</span> <span>></span></a></li>
+          <li><a href=""><span>Postage</span> <span>></span></a></li>
+          <li><a href=""><span>Help/FAQ</span> <span>></span></a></li>
+          <li><a href=""><span>Contact</span> <span>></span></a></li>
+          <li><a href=""><span>Login</span> <span>></span></a></li>
+        </nav>
+      </div>
+      <div class="filAside aside">
+        <div class="close"><img src="/imgs/close.png" alt="" class="closeIcon1" /></div>
+        <nav>
+          <li><a href="productList.html"><span>Product</span> <span>></span></a></li>
+          <li><a href=""><span>Brand</span> <span>></span></a></li>
+          <li><a href=""><span>Color</span> <span>></span></a></li>
+          <li><a href=""><span>Availability</span> <span>></span></a></li>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div id="page-loader">
+    <div class="spinner"></div>
+  </div>
+
+  <script src="./js/res.js"></script>
+  <script src="./js/select.js"></script>
 </body>
 </html>

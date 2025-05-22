@@ -15,8 +15,8 @@
     margin: 0 auto;
     padding: 20px 30px 10px;
     box-sizing: border-box;
-    background-color: #522182;
-    color: white;
+    background-color: #f2f1ed;
+    color:#6228A1;
   }
 
   .page-header .title {
@@ -31,7 +31,7 @@
     padding-top: 20px;
     padding-bottom: 60px;
     box-sizing: border-box;
-    background-color: #60259F;
+    background-color: #d9d9d6;
     min-height: calc(100vh - 160px);
   }
 
@@ -73,6 +73,7 @@
     border-radius: 12px;
     font-size: 20px;
     background-color: #FDBF83;
+    border: 2px solid black;
   }
 
   .search img {
@@ -166,7 +167,7 @@
 
   .mobile {
     display: block;
-    background-color: #592390;
+    background-color: #d9d9d6;
     min-height: 100vh;
   }
 
@@ -180,7 +181,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 6px 10px;
-    background-color: #34116E;
+    color: #f2f1ed;
+    background-color:#6228A1;
   }
 
   .page-header img {
@@ -203,7 +205,7 @@
   }
 
   .search-title {
-    color: white;
+    color: #6228A1;
     text-align: center;
     font-size: 30px;
     line-height: 70px;
@@ -215,6 +217,7 @@
     border-radius: 20px;
     font-size: 20px;
     background-color: #FDBF83;
+    border: 2px solid black;
   }
 
   .search-box img {
@@ -395,4 +398,32 @@ li {
 
 .openIcon {
   cursor: pointer;
+}
+
+#page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.9); 
+  z-index: 9999;
+  display: none; 
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #ccc;
+  border-top-color: #6125A1; 
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
