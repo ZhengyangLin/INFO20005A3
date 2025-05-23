@@ -236,9 +236,9 @@
     color: #3B1672;
     background-color: #EDA1E9;
     font-weight: 700;
-  border: 1px solid #6125A1;
-  border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 1px solid #6125A1;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
 
   .aside {
