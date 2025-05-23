@@ -1,3 +1,4 @@
+/* desktop version */
 @media screen and (min-width: 1024px) {
   .pc {
     display: block;
@@ -158,6 +159,7 @@
   }
 }
 
+/* mobile version */
 @media screen and (min-width: 300px) and (max-width: 1024px) {
   .pc {
     display: none;
@@ -400,6 +402,7 @@ li {
   cursor: pointer;
 }
 
+/* load animation */
 #page-loader {
   position: fixed;
   top: 0;

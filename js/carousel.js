@@ -1,3 +1,4 @@
+// js for carousel in pc and mobile version
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".carousel").forEach((carousel) => {
     const carouselInner = carousel.querySelector(".carousel-inner");

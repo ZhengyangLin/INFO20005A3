@@ -1,9 +1,9 @@
+// side bar in the mobile version
 document.addEventListener('DOMContentLoaded', function () {
   const aside = document.querySelector('.aside');
   
   const openIcon = document.querySelector('.openIcon');
   const closeIcon = document.querySelector('.closeIcon');
-  const closeIcon1 = document.querySelector('.closeIcon1');
   
 
  
@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
  
 });
 
+// load animation
 const loader = document.getElementById('page-loader');
   const links = document.querySelectorAll('a');
 

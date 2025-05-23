@@ -1,3 +1,4 @@
+/* desktop version */
 @media screen and (min-width: 1024px) {
     .goods-detail {
         display: flex;
@@ -111,8 +112,26 @@
         background-color: #FDCC44;
         border-radius: 20px;
     }
-}
 
+    .page-content {
+        background-color: #d9d9d6;
+        min-height: calc(100vh - 160px);
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        padding: 0;
+    }
+
+    .page-wrapper {
+        width: 80%;
+        background-color: rgb(233, 231, 231);
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+    }
+}
+/* mobile version */
 @media screen and (min-width: 300px) and (max-width: 1024px) {
     .goods-detail {
         display: flex;
