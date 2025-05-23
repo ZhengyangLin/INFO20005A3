@@ -2,133 +2,238 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail</title>
-    <link rel="stylesheet" href="./css/res.css">
-    <link rel="stylesheet" href="./css/product.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail</title>
+  <link rel="stylesheet" href="./css/res.css">
+  <link rel="stylesheet" href="./css/product.css">
 </head>
 
 <body>
-    <!-- desktop version -->
-    <div class="productPage pc">
-        <div class="page-header">
-            <div class="title">Minotaur</div>
-            <div class="cart"><a href="cart.html"><img src="imgs/shopping-cart.png" alt=""></a></div>
+  <!-- desktop version -->
+  <div class="productPage pc">
+    <div class="page-header">
+      <div class="title">Minotaur</div>
+      <div class="cart"><a href="cart.html"><img src="imgs/shopping-cart.png" alt=""></a></div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="">Toys</a></li>
+        <li><a href="">Books</a></li>
+        <li><a href="">Videos</a></li>
+        <li><a href="">Games</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="page-content">
+      <div class="page-wrapper">
+        <div class="search">
+          <input type="text" placeholder="Search..." name="" id="">
+          <a href="productList.html"><img src="/imgs/search.png" alt=""></a>
         </div>
-        <nav>
+        <div class="goods-detail">
+          <div class="left">
+            <img src="imgs/alarmo.jpg" alt="">
+            <div class="des">
+              <div class="description">Description</div>
+              <div class="dess">Make waking up fun with Nintendo Sound Clock:
+                Alarmo™
+                Introduce a little play to your wake-up routine with</div>
+            </div>
+          </div>
+          <div class="right">
+            <div class="name">Nintendo alarmo</div>
+            <div class="price">
+              <span>Price:</span>
+              <span>$159.99</span>
+            </div>
+            <div class="stock">
+              <span>Stock:</span>
+              <div>In stock</div>
+            </div>
+            <div class="quantity">
+              <span>Quantity:</span>
+              <div class="computed">
+                <div class="subtract">—</div>
+                <div class="num">0</div>
+                <div class="add">+</div>
+              </div>
+            </div>
+            <div class="btns">
+              <div class="buy">Buy</div>
+              <div class="add-cart Nintendo">Add to cart</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-section about">
+          <h2>Minotaur</h2>
+          <p>
+            We are a hub of collectibles, anime, manga, games, and pop culture.<br>
+            Bringing fans closer to their passion, one item at a time.
+          </p>
+          <div class="social-icons">
+            <img src="imgs/discord.png" alt="Discord" />
+            <img src="imgs/instagram.png" alt="Instagram" />
+            <img src="imgs/facebook.png" alt="Facebook" />
+            <img src="imgs/twitter.png" alt="Twitter" />
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="#">> New Arrivals</a></li>
+            <li><a href="#">> Best Sellers</a></li>
+            <li><a href="#">> Pre-orders</a></li>
+            <li><a href="#">> Limited Editions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Customer Support</h3>
+          <ul>
+            <li><a href="#">> Contact Us</a></li>
+            <li><a href="#">> FAQ</a></li>
+            <li><a href="#">> Shipping & Returns</a></li>
+            <li><a href="#">> Track Order</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>About</h3>
+          <ul>
+            <li><a href="#">> About Us</a></li>
+            <li><a href="#">> Careers</a></li>
+            <li><a href="#">> Store Locations</a></li>
+            <li><a href="#">> Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>All Rights Reserved</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- mobile version -->
+  <div class="productPage mobile">
+    <div class="page-header">
+      <div class="popup"><img src="imgs/menu.png" alt="" class="openIcon"></div>
+      <div class="cart"><img src="imgs/shopping-cart(1).png" alt=""></div>
+    </div>
+    <div class="page-content">
+      <div class="page-wrapper">
+        <div class="search">
+          <div class="search-title">Minotaur</div>
+          <div class="search-box">
+            <input type="text" placeholder="Search..." name="" id="">
+            <a href="productList.html"><img src="imgs/search.png" alt=""></a>
+          </div>
+        </div>
+        <div class="goods-detail">
+          <div class="left">
+            <img src="imgs/alarmo.jpg" alt="">
+          </div>
+          <div class="right">
+            <div class="name">Nintendo alarmo</div>
+            <div class="price">
+              <span>Price:</span>
+              <span>$159.99</span>
+            </div>
+            <div class="stock">
+              In stock
+            </div>
+            <div class="quantity">
+              <span>Quantity:</span>
+              <div class="computed">
+                <div class="subtract">—</div>
+                <div class="num">0</div>
+                <div class="add">+</div>
+              </div>
+            </div>
+            <div class="btns">
+              <div class="buy">Buy</div>
+              <div class="add-cart Nintendo">Add to cart</div>
+            </div>
+          </div>
+        </div>
+        <div class="aside">
+          <div class="close"><img src="imgs/close.png" alt="" class="closeIcon"></div>
+          <nav>
+            <li><a href="index.html"><span>Home</span> <span>></span></a></li>
+            <li><a href=""><span>Blog</span> <span>></span></a></li>
+            <li><a href=""><span>Postage</span> <span>></span></a></li>
+            <li><a href=""><span>Help/FAQ</span> <span>></span></a></li>
+            <li><a href=""><span>Contact</span> <span>></span></a></li>
+            <li><a href=""><span>Login</span> <span>></span></a></li>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-links">
+          <div class="footer-section">
+            <h3>Shop</h3>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="">Toys</a></li>
-                <li><a href="">Books</a></li>
-                <li><a href="">Videos</a></li>
-                <li><a href="">Games</a></li>
-                <li><a href="">Contact</a></li>
+              <li><a href="#">> New Arrivals</a></li>
+              <li><a href="#">> Best Sellers</a></li>
+              <li><a href="#">> Pre-orders</a></li>
+              <li><a href="#">> Limited Editions</a></li>
             </ul>
-        </nav>
-        <div class="page-content">
-            <div class="page-wrapper">
-                <div class="search">
-                    <input type="text" placeholder="Search..." name="" id="">
-                    <a href="productList.html"><img src="/imgs/search.png" alt=""></a>
-                </div>
-                <div class="goods-detail">
-                    <div class="left">
-                        <img src="imgs/alarmo.jpg" alt="">
-                        <div class="des">
-                            <div class="description">Description</div>
-                            <div class="dess">Make waking up fun with Nintendo Sound Clock: 
-                                Alarmo™
-                                Introduce a little play to your wake-up routine with</div>
-                        </div>
-                    </div>
-                    <div class="right">
-                        <div class="name">Nintendo alarmo</div>
-                        <div class="price">
-                            <span>Price:</span>
-                            <span>$159.99</span>
-                        </div>
-                        <div class="stock">
-                            <span>Stock:</span>
-                            <div>In stock</div>
-                        </div>
-                        <div class="quantity">
-                            <span>Quantity:</span>
-                            <div class="computed">
-                                <div class="subtract">—</div>
-                                <div class="num">0</div>
-                                <div class="add">+</div>
-                            </div>
-                        </div>
-                        <div class="btns">
-                            <div class="buy">Buy</div>
-                            <div class="add-cart Nintendo">Add to cart</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>Customer Support</h3>
+            <ul>
+              <li><a href="#">> Contact Us</a></li>
+              <li><a href="#">> FAQ</a></li>
+              <li><a href="#">> Shipping & Returns</a></li>
+              <li><a href="#">> Track Order</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>About</h3>
+            <ul>
+              <li><a href="#">> About Us</a></li>
+              <li><a href="#">> Careers</a></li>
+              <li><a href="#">> Store Locations</a></li>
+              <li><a href="#">> Privacy Policy</a></li>
+            </ul>
+          </div>
         </div>
-    </div>
-    <!-- mobile version -->
-    <div class="productPage mobile">
-        <div class="page-header">
-            <div class="popup"><img src="imgs/menu.png" alt="" class="openIcon"></div>
-            <div class="cart"><img src="imgs/shopping-cart(1).png" alt=""></div>
+
+        <div class="footer-section about">
+          <h2>Minotaur</h2>
+          <p>
+            We are a hub of collectibles, anime, manga, games, and pop culture.<br>
+            Bringing fans closer to their passion, one item at a time.
+          </p>
+          <div class="social-icons">
+            <img src="imgs/discord.png" alt="Discord" />
+            <img src="imgs/instagram.png" alt="Instagram" />
+            <img src="imgs/facebook.png" alt="Facebook" />
+            <img src="imgs/twitter.png" alt="Twitter" />
+          </div>
         </div>
-        <div class="page-content">
-            <div class="page-wrapper">
-                <div class="search">
-                    <div class="search-title">Minotaur</div>
-                    <div class="search-box">
-                        <input type="text" placeholder="Search..." name="" id="">
-                        <a href="productList.html"><img src="imgs/search.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="goods-detail">
-                    <div class="left">
-                        <img src="imgs/alarmo.jpg" alt="">
-                    </div>
-                    <div class="right">
-                        <div class="name">Nintendo alarmo</div>
-                        <div class="price">
-                            <span>Price:</span>
-                            <span>$159.99</span>
-                        </div>
-                        <div class="stock">
-                            In stock
-                        </div>
-                        <div class="quantity">
-                            <span>Quantity:</span>
-                            <div class="computed">
-                                <div class="subtract">—</div>
-                                <div class="num">0</div>
-                                <div class="add">+</div>
-                            </div>
-                        </div>
-                        <div class="btns">
-                            <div class="buy">Buy</div>
-                            <div class="add-cart Nintendo">Add to cart</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="aside">
-                    <div class="close"><img src="imgs/close.png" alt="" class="closeIcon"></div>
-                    <nav>
-                        <li><a href="index.html"><span>Home</span> <span>></span></a></li>
-                        <li><a href=""><span>Blog</span> <span>></span></a></li>
-                        <li><a href=""><span>Postage</span> <span>></span></a></li>
-                        <li><a href=""><span>Help/FAQ</span> <span>></span></a></li>
-                        <li><a href=""><span>Contact</span> <span>></span></a></li>
-                        <li><a href=""><span>Login</span> <span>></span></a></li>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </div>
-      <div id="page-loader">
+      </div>
+      <div class="footer-bottom">
+        <p>All Rights Reserved</p>
+      </div>
+    </footer>
+  </div>
+
+  <div id="page-loader">
     <div class="spinner"></div>
-    </div>
-    <script src="./js/res.js"></script>
-    <script src="./js/cart.js"></script>
+  </div>
+  <script src="./js/res.js"></script>
+  <script src="./js/cart.js"></script>
 </body>
+
 </html>
