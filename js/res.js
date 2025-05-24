@@ -29,43 +29,37 @@ document.addEventListener('DOMContentLoaded', function () {
 // load animation
 
 
-window.addEventListener('pageshow', (event) => {
+(function () {
   const loader = document.getElementById('page-loader');
-  if (event.persisted && loader) {
-    loader.style.display = 'none';
+
+  function hideLoader() {
+    if (loader) loader.classList.remove('active');
   }
-});
 
+  
+  window.addEventListener('load', hideLoader);
+  window.addEventListener('pageshow', hideLoader);
 
-window.addEventListener('load', () => {
-  const loader = document.getElementById('page-loader');
-  if (loader) {
-    loader.style.display = 'none';
-  }
-});
+  
+  const links = document.querySelectorAll('a[href]:not(.no-loader)');
 
+  links.forEach(link => {
+    const href = link.getAttribute('href');
+    if (
+      href &&
+      !href.startsWith('#') &&
+      !href.startsWith('javascript')
+    ) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (loader) loader.classList.add('active');
 
-const loader = document.getElementById('page-loader');
-const links = document.querySelectorAll('a');
+        setTimeout(() => {
+          window.location.href = href;
+        }, 300);
+      });
+    }
+  });
+})();
 
-links.forEach(link => {
-  const href = link.getAttribute('href');
-
-  if (
-    href &&
-    !href.startsWith('#') &&
-    !href.startsWith('javascript') &&
-    !link.classList.contains('no-loader')
-  ) {
-    link.addEventListener('click', function (e) {
-      e.preventDefault();
-      if (loader) {
-        loader.style.display = 'flex';
-      }
-      setTimeout(() => {
-        window.location.href = href;
-      }, 300);
-    });
-  }
-});
 
