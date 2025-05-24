@@ -87,7 +87,7 @@
     right: 20px;
     transform: translateY(-50%);
   }
-
+  /* style for footer */
   .site-footer {
     background-color: #0f0f0f;
     color: white;
@@ -289,7 +289,7 @@
     border: 0;
     width: 100%;
   }
-
+  /* style for footer */
   .site-footer {
     background-color: #0f0f0f;
     color: white;

@@ -142,14 +142,14 @@
     height: 300px;
   }
 
-  .active-moudles {
+  .product-module {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 40px;
   }
 
-  .moudle {
+  .module {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -165,7 +165,19 @@
     cursor: pointer;
   }
 
-  .moudle img {
+  .module img {
     width: 36px;
   }
+}
+
+/* animation for module icon */
+.module {
+  
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.module:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
