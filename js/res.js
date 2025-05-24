@@ -27,21 +27,31 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // load animation
-const loader = document.getElementById('page-loader');
-  const links = document.querySelectorAll('a');
- 
-  links.forEach(link => {
-    if (link.getAttribute('href') && !link.getAttribute('href').startsWith('#') && !link.getAttribute('href').startsWith('javascript')) {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        loader.style.display = 'flex';
-        const target = this.getAttribute('href');
-        setTimeout(() => {
-          window.location.href = target;
-        }, 300); 
-      });
-    }
-  });
-  window.addEventListener('load', () => {
+
+window.addEventListener('load', () => {
+  const loader = document.getElementById('page-loader');
+  if (loader) {
     loader.style.display = 'none';
+  }
+});
+
+const loader = document.getElementById('page-loader');
+const links = document.querySelectorAll('a');
+
+links.forEach(link => {
+  const href = link.getAttribute('href');
+  if (
+    href &&
+    !href.startsWith('#') &&
+    !href.startsWith('javascript') &&
+    !link.classList.contains('no-loader')
+  ) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      loader.style.display = 'flex';
+      setTimeout(() => {
+        window.location.href = href;
+      }, 300);
+    });
+  }
 });
