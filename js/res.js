@@ -28,6 +28,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // load animation
 
+
+window.addEventListener('pageshow', (event) => {
+  const loader = document.getElementById('page-loader');
+  if (event.persisted && loader) {
+    loader.style.display = 'none';
+  }
+});
+
+
 window.addEventListener('load', () => {
   const loader = document.getElementById('page-loader');
   if (loader) {
@@ -35,11 +44,13 @@ window.addEventListener('load', () => {
   }
 });
 
+
 const loader = document.getElementById('page-loader');
 const links = document.querySelectorAll('a');
 
 links.forEach(link => {
   const href = link.getAttribute('href');
+
   if (
     href &&
     !href.startsWith('#') &&
@@ -48,10 +59,13 @@ links.forEach(link => {
   ) {
     link.addEventListener('click', function (e) {
       e.preventDefault();
-      loader.style.display = 'flex';
+      if (loader) {
+        loader.style.display = 'flex';
+      }
       setTimeout(() => {
         window.location.href = href;
       }, 300);
     });
   }
 });
+
