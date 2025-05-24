@@ -1,3 +1,4 @@
+// js for sidebar
 document.addEventListener('DOMContentLoaded', function () {
   const aside = document.querySelector('.aside');
   const openIcon = document.querySelector('.openIcon');
