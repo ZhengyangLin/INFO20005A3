@@ -14,29 +14,19 @@
         width: 100%;
     }
 
-    .des {
-        padding-left: 15%;
-    }
-
-    .description {
-        color: #D8A3EF;
-        font-size: 30px;
-    }
-
-    .dess {
-        color: white;
-        margin-top: 40px;
-    }
 
     .right {
         width: 55%;
         padding: 10px;
-        border: 4px solid #FDFCFE;
-        border-radius: 20px;
+        background-color: #efefec;
+        padding: 30px;
+        border-radius: 12px;
+        border: 1px solid #e3c49a;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     }
 
     .name {
-        color: #FDBF83;
+        color: #3B1672;
         font-size: 42px;
         line-height: 100px;
     }
@@ -44,20 +34,20 @@
     .price {
         display: flex;
         gap: 30%;
-        color: #F4F82D;
+        color: black;
         font-size: 40px;
         line-height: 100px;
     }
 
     .stock {
-        color: white;
+        color: black;
         font-size: 30px;
         line-height: 60px;
     }
 
     .stock div {
         margin-left: 100px;
-        color: #14FD2F;
+        color: #02700f;
     }
 
     .quantity {
@@ -66,7 +56,7 @@
         justify-content: space-between;
         align-items: center;
         font-size: 30px;
-        color: #FDBF83;
+        color: black;
         margin-top: 40px;
     }
 
@@ -82,12 +72,13 @@
 
     .subtract {
         font-size: 30px;
-        line-height: 40px;
+        line-height: 39px;
+        font-weight: 800;
     }
 
     .add {
         font-size: 50px;
-        line-height: 30px;
+        line-height: 40px;
     }
 
     .btns {
@@ -130,6 +121,18 @@
         display: flex;
         flex-direction: column;
     }
+      .goods-detail .left {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 760px;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+  }
+
+  .goods-detail .left::-webkit-scrollbar {
+    display: none; 
+  }
 }
 /* mobile version */
 @media screen and (min-width: 300px) and (max-width: 1024px) {
@@ -152,19 +155,14 @@
         border-radius: 20px; 
     }
 
-    .des {
-        padding-left: 15%;
-    }
+  
 
     .title {
-        color: #D8A3EF;
+        color: black;
         font-size: 30px;
     }
 
-    .dess {
-        color: white;
-        margin-top: 40px;
-    }
+    
 
     .right {
         padding: 10px;
@@ -173,7 +171,7 @@
     }
 
     .name {
-        color: #FDBF83;
+        color: #3B1672;
         font-size: 28px;
     }
 
@@ -181,12 +179,12 @@
         display: flex;
         align-items: center;
         gap: 5%;
-        color: #F4F82D;
+        color: black;
         font-size: 26px;
     }
 
     .stock {
-        color: #14FD2F;
+        color: #02700f;
         font-size: 20px;
     }
 
@@ -195,7 +193,7 @@
         justify-content: space-between;
         align-items: center;
         font-size: 26px;
-        color: #FDBF83;
+        color: black;
         margin-top: 10px;
     }
 
@@ -216,12 +214,13 @@
     }
     .subtract {
         font-size: 30px;
-        line-height: 40px;
+        line-height: 70px;
+        font-weight: 800;
     }
 
     .add {
         font-size: 50px;
-        line-height: 30px;
+        line-height: 40px;
         padding-bottom: 4px;
     }
 
@@ -248,4 +247,48 @@
         background-color: #FDCC44;
         border-radius: 20px;
     }
+
+}
+/* css for product description */
+.product-description {
+  background-color: #efefec;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #e3c49a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: #3b2e1e;
+}
+
+.product-description h2 {
+  font-size: 24px;
+  color: #512b81;
+  border-bottom: 2px solid #9b9a99;
+  padding-bottom: 6px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.product-description p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.steps .step {
+  background-color: #fdf3e3;
+  border-left: 4px solid #D8A3EF;
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+}
+
+.steps .step h3 {
+  font-size: 18px;
+  color: #512b81;
+  margin-bottom: 8px;
+}
+
+.steps .step p {
+  margin: 0;
 }

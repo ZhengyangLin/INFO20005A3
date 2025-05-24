@@ -39,7 +39,6 @@
   .content li {
     display: flex;
     align-items: center;
-    padding-left: 10px;
     gap: 10px;
     margin-top: 16px;
   }
@@ -285,7 +284,7 @@
     align-items: center;
     background-color: #36135B;
     color: #FFCD95;
-    border: 2px solid #FFCD95;
+    border: 1px solid #FFCD95;
     padding: 4px 13px;
     border-radius: 10px;
   }
@@ -327,12 +326,11 @@
 .sort-menu {
   position: absolute;
   top: 100%;
-  right: 0;
   background-color: #FFCD95;
   border: 1px solid #6125A1;
   border-radius: 6px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 180px;
+  width: 160px;
   max-height: 0;
   overflow: hidden;
   opacity: 0;
@@ -340,6 +338,7 @@
   z-index: 99;
   padding: 0;
   margin-top: 6px;
+  left: 0;
 }
 
 .sort-menu li {
@@ -368,7 +367,7 @@
 }
 
 .sort-toggle {
-  font-weight: 550;
+  font-weight: 500;
 }
 
 .filter-dropdown {
@@ -413,7 +412,7 @@
 }
 
 .filter-menu li:hover {
-  background-color: #eee;
+  background-color: #4705ab;
 }
 
 .filter-dropdown.active .filter-menu {
