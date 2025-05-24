@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // load animation
 const loader = document.getElementById('page-loader');
   const links = document.querySelectorAll('a');
-
+ 
   links.forEach(link => {
     if (link.getAttribute('href') && !link.getAttribute('href').startsWith('#') && !link.getAttribute('href').startsWith('javascript')) {
       link.addEventListener('click', function (e) {
@@ -42,3 +42,6 @@ const loader = document.getElementById('page-loader');
       });
     }
   });
+  window.addEventListener('load', () => {
+    loader.style.display = 'none';
+});
