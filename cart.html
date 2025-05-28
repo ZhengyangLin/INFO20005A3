@@ -1,77 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>cart</title>
-  <link rel="stylesheet" href="./css/res.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="./css/res.css">
+    <link rel="stylesheet" href="./css/cart.css">
 </head>
+
 <body>
-  <!-- desktop version -->
-  <div class="cart pc">
-    <div class="page-header">
-      <div class="title">Minotaur</div>
-      <div class="cart">
-        <a href="cart.html"><img src="imgs/shopping-cart.png" alt="cart" /></a>
-      </div>
+    <div class="cart-page pc">
+        <div class="page-header">
+            <div class="title">Minotaur</div>
+            <div class="cart"><a href="cart.html"><img src="imgs/shopping-cart.png" alt=""></a></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Toys</a></li>
+                <li><a href="">Books</a></li>
+                <li><a href="">Videos</a></li>
+                <li><a href="">Games</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="page-content">
+            <div class="page-wrapper">
+                <div class="you-cart">Your Cart</div>
+                <div class="cart-body">
+                    <div class="head-title">
+                        <div class="left">Product</div>
+                        <div class="center">Quantity</div>
+                        <div class="right">Price</div>
+                    </div>
+                    <hr>
+                    <div class="carts" id="cart-items-pc"></div>
+                    <div class="footer-all">
+                        <div class="notice">
+                            <div class="title">Notice:</div>
+                            <p>PRIOR NOTICE OF PURCHASING</p>
+                            <p>1. Please note that the item is colored manually,
+                                there may be some uneven colorings.</p>
+                            <p>2. Color and form of the product may differ from
+                                the actual product and what is seen on screen
+                                depending on monitor settings.</p>
+                            <p>3. Product images are in development stage.
+                                They may differ from the actual products
+                                shipped.</p>
+                            <p>4. Due to the limited production run, we will
+                                stop accepting applications for reservations
+                                once the quantity available is fulfilled.</p>
+                            <p>5. Delivery of actual product may be delayed
+                                due to unforeseen circumstances and the</p>
+                        </div>
+                        <div class="total">
+                            <div class="numTotal">Total: $ <span id="cart-pc-total">0</span></div>
+                            <p>&nbsp;Include GST</p>
+                            <div class="checkout">Check out</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <div class="footer-container">
+                <div class="footer-section about">
+                    <h2>Minotaur</h2>
+                    <p>
+                        We are a hub of collectibles, anime, manga, games, and pop culture.<br>
+                        Bringing fans closer to their passion, one item at a time.
+                    </p>
+                    <div class="social-icons">
+                        <img src="imgs/discord.png" alt="Discord" />
+                        <img src="imgs/instagram.png" alt="Instagram" />
+                        <img src="imgs/facebook.png" alt="Facebook" />
+                        <img src="imgs/twitter.png" alt="Twitter" />
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="#">> New Arrivals</a></li>
+                        <li><a href="#">> Best Sellers</a></li>
+                        <li><a href="#">> Pre-orders</a></li>
+                        <li><a href="#">> Limited Editions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Support</h3>
+                    <ul>
+                        <li><a href="#">> Contact Us</a></li>
+                        <li><a href="#">> FAQ</a></li>
+                        <li><a href="#">> Shipping & Returns</a></li>
+                        <li><a href="#">> Track Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">> About Us</a></li>
+                        <li><a href="#">> Careers</a></li>
+                        <li><a href="#">> Store Locations</a></li>
+                        <li><a href="#">> Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>All Rights Reserved</p>
+            </div>
+        </footer>
     </div>
 
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="">Toys</a></li>
-        <li><a href="">Books</a></li>
-        <li><a href="">Videos</a></li>
-        <li><a href="">Games</a></li>
-        <li><a href="">Contact</a></li>
-      </ul>
-    </nav>
-
-    <div class="page-content">
-      <div class="page-wrapper">
-      </div>
+    <div class="cart-page mobile">
+        <div class="page-header">
+            <div class="popup"><img src="imgs/menu.png" alt="" class="openIcon"></div>
+            <div class="cart"><a href="cart.html"><img src="imgs/shopping-cart(1).png" alt=""></a></div>
+        </div>
+        <div class="page-content">
+            <div class="page-wrapper">
+                <div class="cart-body">
+                    <div class="carts" id="cart-items"></div>
+                    <div class="footer-all">
+                        <div class="notice">
+                            <div class="title">Notice:</div>
+                            <p>PRIOR NOTICE OF PURCHASING</p>
+                            <p>1. Please note that the item is colored manually,
+                                there may be some uneven colorings.</p>
+                            <p>2. Color and form of the product may differ from
+                                the actual product and what is seen on screen
+                                depending on monitor settings.</p>
+                            <p>3. Product images are in development stage.
+                                They may differ from the actual products
+                                shipped.</p>
+                            <p>4. Due to the limited production run, we will
+                                stop accepting applications for reservations
+                                once the quantity available is fulfilled.</p>
+                            <p>5. Delivery of actual product may be delayed
+                                due to unforeseen circumstances and the</p>
+                        </div>
+                        <div class="total">
+                            <div class="numTotal">Total: $ <span id="cart-total">0</span></div>
+                            <p>&nbsp;Include GST</p>
+                            <div class="checkout">Check out</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="aside">
+                    <div class="close"><img src="imgs/close.png" alt="" class="closeIcon"></div>
+                    <nav>
+                        <li><a href="index.html"><span>Home</span> <span>></span></a></li>
+                        <li><a href=""><span>Blog</span> <span>></span></a></li>
+                        <li><a href=""><span>Postage</span> <span>></span></a></li>
+                        <li><a href=""><span>Help/FAQ</span> <span>></span></a></li>
+                        <li><a href=""><span>Contact</span> <span>></span></a></li>
+                        <li><a href=""><span>Login</span> <span>></span></a></li>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <div class="footer-container">
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h3>Shop</h3>
+                        <ul>
+                            <li><a href="#">> New Arrivals</a></li>
+                            <li><a href="#">> Best Sellers</a></li>
+                            <li><a href="#">> Pre-orders</a></li>
+                            <li><a href="#">> Limited Editions</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Customer Support</h3>
+                        <ul>
+                            <li><a href="#">> Contact Us</a></li>
+                            <li><a href="#">> FAQ</a></li>
+                            <li><a href="#">> Shipping & Returns</a></li>
+                            <li><a href="#">> Track Order</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">> About Us</a></li>
+                            <li><a href="#">> Careers</a></li>
+                            <li><a href="#">> Store Locations</a></li>
+                            <li><a href="#">> Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-section about">
+                    <h2>Minotaur</h2>
+                    <p>
+                        We are a hub of collectibles, anime, manga, games, and pop culture.<br>
+                        Bringing fans closer to their passion, one item at a time.
+                    </p>
+                    <div class="social-icons">
+                        <img src="imgs/discord.png" alt="Discord" />
+                        <img src="imgs/instagram.png" alt="Instagram" />
+                        <img src="imgs/facebook.png" alt="Facebook" />
+                        <img src="imgs/twitter.png" alt="Twitter" />
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>All Rights Reserved</p>
+            </div>
+        </footer>
     </div>
-  </div>
 
-  <!-- mobile version -->
-  <div class="cart mobile">
-    <div class="page-header">
-      <div class="popup">
-        <img src="imgs/menu.png" alt="" class="openIcon" />
-      </div>
-      <div class="cart">
-        <a href="cart.html"><img src="imgs/shopping-cart(1).png" alt="" /></a>
-      </div>
+    <div id="page-loader">
+        <div class="spinner"></div>
     </div>
-
-    <div class="page-content">
-      <div class="page-wrapper">
-        
-      </div>
-    </div>
-
-
-    <div class="aside">
-      <div class="close">
-        <img src="imgs/close.png" alt="" class="closeIcon" />
-      </div>
-      <nav>
-        <li><a href="index.html"><span>Home</span> <span>></span></a></li>
-        <li><a href=""><span>Blog</span> <span>></span></a></li>
-        <li><a href=""><span>Postage</span> <span>></span></a></li>
-        <li><a href=""><span>Help/FAQ</span> <span>></span></a></li>
-        <li><a href=""><span>Contact</span> <span>></span></a></li>
-        <li><a href=""><span>Login</span> <span>></span></a></li>
-      </nav>
-    </div>
-  </div>
-
-
-  <div id="page-loader">
-    <div class="spinner"></div>
-  </div>
-
 </body>
+
 <script src="./js/res.js"></script>
 <script src="./js/cart.js"></script>
+
 </html>
