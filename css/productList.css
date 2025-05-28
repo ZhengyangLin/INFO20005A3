@@ -55,7 +55,6 @@
 
   .results .title {
     font-size: 30px;
-    color: black;
   }
 
   .goods-body {
@@ -247,7 +246,6 @@
 
   .results .title {
     font-size: 20px;
-    color: black;
   }
 
   .goods-body {
@@ -367,6 +365,21 @@
     max-height: 300px;
     opacity: 1;
   }
+
+  .sort-toggle {
+    display: inline-flex;
+    align-items: center;      
+    justify-content: center;  
+    gap: 6px;                 
+    height: 100%;  
+  }
+  .sort-toggle img {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;   
+  }
+
+
 
 
 

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // get product info product detail page
+    // get product info on product detail page
     const productNameEl = document.querySelector('.name');
     const productPriceEl = document.querySelector('.price span:nth-child(2)');
     const productImageEl = document.querySelector('.goods-detail img');
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!productNameEl || !productPriceEl) return;
 
-    // Extra product details
+    // get extra product details
     const name = productNameEl.textContent.trim();
     const priceText = productPriceEl.textContent.replace('$', '').trim();
     const image = productImageEl?.src || '';
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Determine final price
     const price = productCatalog[name] || parseFloat(priceText);
 
-    // Update all quantity display elements
+    // Update quantity
     const updateDisplay = () => {
         quantityDisplays.forEach(el => el.textContent = quantity.value);
     };
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }));
 
-    // "Add to Cart" button
+    // Add to Cart button
     addCartBtns.forEach(btn => btn.addEventListener('click', () => {
         if (quantity.value === 0) return alert('Select at least 1!');
         addToCart({ name, price, quantity: quantity.value, image, stock: 'In stock' });
@@ -78,7 +78,7 @@ function updateCartCount() {
     document.querySelectorAll('#cart-count').forEach(el => el.textContent = totalItems);
 }
 
-// Render the cart contents for both PC and mobile views
+// Render the cart contents for both PC and mobile version
 function renderCart() {
     const containerPC = document.getElementById('cart-items-pc');
     const containerMobile = document.getElementById('cart-items');
@@ -99,7 +99,7 @@ function renderCart() {
             <div class="cart-item">
                 <div class="left">
                     <img src="${item.image}" alt="">
-                    <div class="goods-insfo">
+                    <div class="goods-info">
                         <div class="name">${name}</div>
                         <div class="price">Price: $${item.price}</div>
                         <div class="stock">${stockText}</div>
@@ -123,7 +123,7 @@ function renderCart() {
             <div class="cart-item">
                 <div class="left">
                     <img src="${item.image}" alt="">
-                    <div class="goods-insfo">
+                    <div class="goods-info">
                         <div class="name">${name}</div>
                         <div class="price">Price: $${item.price}</div>
                         <div class="stock">${stockText}</div>
