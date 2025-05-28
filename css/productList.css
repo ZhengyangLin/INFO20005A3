@@ -107,7 +107,7 @@
 
   .apply-btn button {
     background-color: #6125A1;
-    color:white;
+    color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 10px;
@@ -192,7 +192,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
 
-  /* style for filter scorling */
+  /* style for filter scrolling */
   .filter .content::-webkit-scrollbar {
     width: 8px;
   }
@@ -211,7 +211,6 @@
   .filter .content::-webkit-scrollbar-thumb:hover {
     background-color: #834fc4;
   }
-
 }
 
 /* mobile version */
@@ -321,8 +320,9 @@
     justify-content: center;
     gap: 8px;
   }
-  .filter img { 
-    width: 20px; 
+
+  .filter img {
+    width: 20px;
     margin-top: 2px;
   }
 
@@ -368,20 +368,17 @@
 
   .sort-toggle {
     display: inline-flex;
-    align-items: center;      
-    justify-content: center;  
-    gap: 6px;                 
-    height: 100%;  
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    height: 100%;
   }
+
   .sort-toggle img {
     width: 16px;
     height: 16px;
-    vertical-align: middle;   
+    vertical-align: middle;
   }
-
-
-
-
 
   .filter-dropdown {
     position: relative;

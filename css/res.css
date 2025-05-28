@@ -87,6 +87,7 @@
     right: 20px;
     transform: translateY(-50%);
   }
+
   /* style for footer */
   .site-footer {
     background-color: #0f0f0f;
@@ -240,7 +241,7 @@
     font-weight: 700;
     border: 1px solid #6125A1;
     border-radius: 6px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
 
   .aside {
@@ -289,6 +290,7 @@
     border: 0;
     width: 100%;
   }
+
   /* style for footer */
   .site-footer {
     background-color: #0f0f0f;
@@ -405,7 +407,7 @@ li {
 
 /* load animation */
 #page-loader {
-  display: none; 
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -420,7 +422,6 @@ li {
 #page-loader.active {
   display: flex;
 }
-
 
 .spinner {
   width: 50px;
