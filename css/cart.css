@@ -101,7 +101,7 @@
     margin-left: 80px;
   }
 
-  .footer-all {
+  .footer-notice {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
@@ -165,6 +165,23 @@
     font-size: 15px;
     margin-bottom: 8px;
     font-weight: bold;
+  }
+
+  .continue {
+    width: 200px;
+    height: 40px;
+    padding: 10px 0;
+    margin-left: 20px;
+    line-height: 40px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 14px;
+    font-size: 14px; 
+    color: #3B1672;
+    background-color: #D8A3EF;
+    white-space: nowrap;  
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
@@ -246,7 +263,7 @@
     font-size: 30px;
   }
 
-  .footer-all {
+  .footer-notice {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
@@ -280,9 +297,25 @@
     line-height: 1.7;
     margin: 0 auto;
   }
+
+  .continue {
+    width: 140px;
+    height: 40px;
+    padding: 10px 0;
+    line-height: 40px;
+    margin-top: 60px;
+    text-align: center;
+    border-radius: 14px;
+    font-size: 14px; 
+    color: #3B1672;
+    background-color: #D8A3EF;
+    white-space: nowrap;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
-/* animation for check out icon */
+/* Dynamic effects for check out and continue icon */
 .checkout {
   border: 1px solid #F46969;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -297,4 +330,16 @@
 
 .remove {
   cursor: pointer;
+}
+
+.continue {
+  border: 1px solid #3B1672;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.continue:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
