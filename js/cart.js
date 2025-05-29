@@ -7,19 +7,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const addBtns = document.querySelectorAll('.add');
     const subtractBtns = document.querySelectorAll('.subtract');
     const addCartBtns = document.querySelectorAll('.add-cart');
+    const buyBtns = document.querySelectorAll('.buy');
+
     const params = new URLSearchParams(window.location.search);
     const productName = params.get('name');
 
-
     if (!productNameEl || !productPriceEl) return;
 
-    // get extra product details
     const name = productNameEl.textContent.trim();
     const priceText = productPriceEl.textContent.replace('$', '').trim();
     const image = productImageEl?.src || '';
-    const quantity = { value: 0 };
-
-    // product prices
+    const quantity = { value: 1 };
+    // product price
     const productCatalog = {
         'Digivice-25th': 259.99,
         'Nintendo alarmo': 159.99,
@@ -27,20 +26,16 @@ document.addEventListener('DOMContentLoaded', () => {
         'Witch on the Holy Night': 99.99
     };
 
-    // Determine final price
     const price = productCatalog[name] || parseFloat(priceText);
 
-    // Update quantity
     const updateDisplay = () => {
         quantityDisplays.forEach(el => el.textContent = quantity.value);
     };
-
-    // add button 
+    // add button
     addBtns.forEach(btn => btn.addEventListener('click', () => {
         quantity.value++;
         updateDisplay();
     }));
-
     // subtract button
     subtractBtns.forEach(btn => btn.addEventListener('click', () => {
         if (quantity.value > 0) {
@@ -48,17 +43,25 @@ document.addEventListener('DOMContentLoaded', () => {
             updateDisplay();
         }
     }));
-
-    // Add to Cart button
+    // add to cart buttons
     addCartBtns.forEach(btn => btn.addEventListener('click', () => {
         if (quantity.value === 0) return alert('Select at least 1!');
         addToCart({ name, price, quantity: quantity.value, image, stock: 'In stock' });
         quantity.value = 0;
         updateDisplay();
     }));
+
+    // Buy button logic = Add to cart + jump to cart page
+    buyBtns.forEach(btn => btn.addEventListener('click', () => {
+        if (quantity.value === 0) return alert('Select at least 1!');
+        addToCart({ name, price, quantity: quantity.value, image, stock: 'In stock' });
+        quantity.value = 0;
+        updateDisplay();
+        window.location.href = 'cart.html';
+    }));
 });
 
-// Add product to localStorage cart
+// add product to localStorage cart
 function addToCart({ name, price, quantity, image = '', stock = 'In stock' }) {
     const cart = JSON.parse(localStorage.getItem('cart')) || {};
     if (cart[name]) {
@@ -71,7 +74,7 @@ function addToCart({ name, price, quantity, image = '', stock = 'In stock' }) {
     alert(`${name} added to cart!`);
 }
 
-// Update the cart icon with the total number of items
+// update the cart icon with the total number of items
 function updateCartCount() {
     const cart = JSON.parse(localStorage.getItem('cart')) || {};
     const totalItems = Object.values(cart).reduce((sum, item) => sum + item.quantity, 0);
@@ -94,7 +97,6 @@ function renderCart() {
         total += item.price * item.quantity;
         const stockText = item.stock === 'In stock' ? '🟢 In stock' : '🔴 Out of stock';
 
-        // PC version
         const pcHTML = `
             <div class="cart-item">
                 <div class="left">
@@ -118,7 +120,6 @@ function renderCart() {
             <hr/>
         `;
 
-        // Mobile version
         const mobileHTML = `
             <div class="cart-item">
                 <div class="left">
@@ -145,13 +146,12 @@ function renderCart() {
         containerMobile.insertAdjacentHTML('beforeend', mobileHTML);
     }
 
-    // Update total price
     document.getElementById('cart-pc-total').textContent = total.toFixed(2);
     document.getElementById('cart-total').textContent = total.toFixed(2);
     updateCartCount();
 }
 
-// Adjust the quantity of a specific item in the cart
+// adjust the quantity of a specific item in the cart
 function updateQuantity(name, delta) {
     const cart = JSON.parse(localStorage.getItem('cart')) || {};
     if (cart[name]) {
@@ -164,7 +164,7 @@ function updateQuantity(name, delta) {
     }
 }
 
-// Remove a product entirely from the cart
+// remove a product entirely from the cart
 function removeItem(name) {
     const cart = JSON.parse(localStorage.getItem('cart')) || {};
     delete cart[name];
@@ -177,9 +177,20 @@ window.addEventListener('load', () => {
     renderCart();
     updateCartCount();
 });
-
-
-
-
+// can not go the confirm page if cart is empty
+document.addEventListener('DOMContentLoaded', () => {
+    const checkoutDivs = document.querySelectorAll('.checkout');
+    checkoutDivs.forEach(div => {
+        div.addEventListener('click', function (e) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || {};
+            const isEmpty = Object.keys(cart).length === 0;
+            if (isEmpty) {
+                e.preventDefault();      
+                e.stopPropagation();     
+                alert('Your cart is empty!');
+            }
+        });
+    });
+});
 
 
