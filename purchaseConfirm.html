@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>homepage</title>
+  <title>confirm</title>
   <link rel="stylesheet" href="./css/res.css" />
   <link rel="stylesheet" href="./css/purchaseConfirm.css" />
 </head>
@@ -30,9 +30,86 @@
 
     <div class="page-content">
       <div class="page-wrapper">
+        <div class="container">
+    <h1>Confirm Your Order</h1>
 
+    <div class="order-summary"></div>
 
+    <h2>Stay Connected</h2>
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" placeholder="you@example.com" required />
 
+    <div class="checkbox-wrapper">
+      <input type="checkbox" id="subscribe" name="subscribe" />
+      <label for="subscribe">I want to receive promotional emails and updates.</label>
+    </div>
+
+    <form class="checkout-form">
+      <h2>Delivery Method</h2>
+      <div class="delivery-options">
+        <label class="delivery-option">
+          <input type="radio" name="deliveryMethod" value="delivery" checked />
+          <span class="method-label">Delivery</span>
+          <span class="icon">🚚</span>
+        </label>
+
+        <label class="delivery-option">
+          <input type="radio" name="deliveryMethod" value="pickup" />
+          <span class="method-label">Click & Collect</span>
+          <span class="icon">🏬</span>
+        </label>
+
+        <label class="delivery-option">
+          <input type="radio" name="deliveryMethod" value="point" />
+          <span class="method-label">Ship to collection point</span>
+          <span class="icon">📍</span>
+        </label>
+      </div>
+
+      <div id="delivery-section">
+        <h2>Shipping Address</h2>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="address">Street Address</label>
+        <input type="text" id="address" name="address" required />
+
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" required />
+
+        <label for="zip">Postal Code</label>
+        <input type="text" id="zip" name="zip" required />
+      </div>
+
+      <div id="pickup-section" style="display: none;">
+        <h2>Pickup Information</h2>
+
+        <label for="pickup-name">Pickup Person's Name</label>
+        <input type="text" id="pickup-name" name="pickup-name" required />
+
+        <label for="pickup-time">Pickup Time</label>
+        <input type="datetime-local" id="pickup-time" name="pickup-time" required />
+
+        <p class="pickup-note">※ Please bring a valid ID to collect your order.</p>
+      </div>
+
+      <h2>Payment Details</h2>
+      <label for="cardname">Cardholder Name</label>
+      <input type="text" id="cardname" name="cardname" required />
+
+      <label for="cardnumber">Card Number</label>
+      <input type="text" id="cardnumber" name="cardnumber" maxlength="16" required />
+
+      <label for="expiry">Expiry Date</label>
+      <input type="month" id="expiry" name="expiry" required />
+
+      <label for="cvv">CVV</label>
+      <input type="text" id="cvv" name="cvv" maxlength="4" required />
+        <button type="submit" class="submit-btn">Confirm Order</button>
+      
+
+    </form>
+  </div>
       </div>
     </div>
 
@@ -100,12 +177,85 @@
 
     <div class="page-content">
       <div class="page-wrapper">
-        
+        <div class="container">
+    <h1>Confirm Your Order</h1>
 
+    <div class="order-summary"></div>
 
+    <h2>Stay Connected</h2>
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" placeholder="you@example.com" required />
 
+    <div class="checkbox-wrapper">
+      <input type="checkbox" id="subscribe" name="subscribe" />
+      <label for="subscribe">I want to receive promotional emails and updates.</label>
+    </div>
 
+    <form class="checkout-form">
+      <h2>Delivery Method</h2>
+      <div class="delivery-options">
+        <label class="delivery-option">
+          <input type="radio" name="deliveryMethod" value="delivery" checked />
+          <span class="method-label">Delivery</span>
+          <span class="icon">🚚</span>
+        </label>
 
+        <label class="delivery-option">
+          <input type="radio" name="deliveryMethod" value="pickup" />
+          <span class="method-label">Click & Collect</span>
+          <span class="icon">🏬</span>
+        </label>
+
+        <label class="delivery-option">
+          <input type="radio" name="deliveryMethod" value="point" />
+          <span class="method-label">Ship to collection point</span>
+          <span class="icon">📍</span>
+        </label>
+      </div>
+
+      <div id="delivery-section">
+        <h2>Shipping Address</h2>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="address">Street Address</label>
+        <input type="text" id="address" name="address" required />
+
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" required />
+
+        <label for="zip">Postal Code</label>
+        <input type="text" id="zip" name="zip" required />
+      </div>
+
+      <div id="pickup-section" style="display: none;">
+        <h2>Pickup Information</h2>
+
+        <label for="pickup-name">Pickup Person's Name</label>
+        <input type="text" id="pickup-name" name="pickup-name" required />
+
+        <label for="pickup-time">Pickup Time</label>
+        <input type="datetime-local" id="pickup-time" name="pickup-time" required />
+
+        <p class="pickup-note">※ Please bring a valid ID to collect your order.</p>
+      </div>
+
+      <h2>Payment Details</h2>
+      <label for="cardname">Cardholder Name</label>
+      <input type="text" id="cardname" name="cardname" required />
+
+      <label for="cardnumber">Card Number</label>
+      <input type="text" id="cardnumber" name="cardnumber" maxlength="16" required />
+
+      <label for="expiry">Expiry Date</label>
+      <input type="month" id="expiry" name="expiry" required />
+
+      <label for="cvv">CVV</label>
+      <input type="text" id="cvv" name="cvv" maxlength="4" required />
+
+      <button type="submit" class="submit-btn">Confirm Order</button>
+    </form>
+  </div>
       </div>
     </div>
 
@@ -184,5 +334,6 @@
 
 
 </body>
+  <script src="./js/confirm.js"></script>
   <script src="./js/res.js"></script>
 </html>
