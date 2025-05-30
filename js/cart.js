@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     addCartBtns.forEach(btn => btn.addEventListener('click', () => {
         if (quantity.value === 0) return alert('Select at least 1!');
         addToCart({ name, price, quantity: quantity.value, image, stock: 'In stock' });
-        quantity.value = 0;
+        quantity.value = 1;
         updateDisplay();
     }));
 
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     buyBtns.forEach(btn => btn.addEventListener('click', () => {
         if (quantity.value === 0) return alert('Select at least 1!');
         addToCart({ name, price, quantity: quantity.value, image, stock: 'In stock' });
-        quantity.value = 0;
+        quantity.value = 1;
         updateDisplay();
         window.location.href = 'cart.html';
     }));
