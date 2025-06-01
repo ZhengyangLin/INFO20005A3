@@ -1,6 +1,7 @@
 // js for carousel in pc and mobile version
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".carousel").forEach((carousel) => {
+    // get the carousel elements
     const carouselInner = carousel.querySelector(".carousel-inner");
     const items = carousel.querySelectorAll(".carousel-item");
     const prevBtn = carousel.querySelector(".prev");
@@ -10,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentIndex = 0;
     const totalItems = items.length;
 
-   
+    // create the buttom indicators
     for (let i = 0; i < totalItems; i++) {
       const btn = document.createElement("button");
       btn.classList.add("carousel-indicator");
@@ -23,24 +24,24 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const indicators = carousel.querySelectorAll(".carousel-indicator");
-
+    // update the carousel and indicators
     function updateCarousel() {
       carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
       indicators.forEach((btn) => btn.classList.remove("active"));
       indicators[currentIndex].classList.add("active");
     }
-
+    // move to next img
     function moveNext() {
       currentIndex = (currentIndex + 1) % totalItems;
       updateCarousel();
     }
-
+    // back to pre img
     function movePrev() {
       currentIndex = (currentIndex - 1 + totalItems) % totalItems;
       updateCarousel();
     }
 
-   
+    // auto change the img 
     setInterval(moveNext, 5000);
 
     nextBtn.addEventListener("click", moveNext);

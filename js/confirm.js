@@ -1,9 +1,10 @@
+// js for confirm page
 function renderOrderSummary() {
   const containers = document.querySelectorAll('.order-summary');
   const cart = JSON.parse(localStorage.getItem('cart')) || {};
   let total = 0;
   let html = '';
-
+ // update the order detail
   for (const [name, item] of Object.entries(cart)) {
     total += item.price * item.quantity;
     html += `
@@ -27,11 +28,11 @@ function renderOrderSummary() {
       <hr/>
     `;
   }
-
+  // show the total number
   html += `<div style="margin-top: 20px;"><strong>Total:</strong> $${total.toFixed(2)}</div>`;
   containers.forEach(container => (container.innerHTML = html));
 }
-
+// submit the order
 function setupFormSubmitHandler() {
   document.querySelectorAll(".submit-btn").forEach(button => {
     button.addEventListener("click", function (e) {
@@ -40,7 +41,7 @@ function setupFormSubmitHandler() {
     });
   });
 }
-
+// show different chectout form when click different options
 function updateDeliverySections() {
   document.querySelectorAll("form.checkout-form").forEach(form => {
     const selected = form.querySelector('input[name="deliveryMethod"]:checked')?.value;
@@ -54,7 +55,7 @@ function updateDeliverySections() {
       pickupSection.style.display = selected === 'pickup' ? 'block' : 'none';
   });
 }
-
+// track the options user select and update the form
 function setupDeliveryToggle() {
   document.querySelectorAll("form.checkout-form").forEach(form => {
     form.querySelectorAll('input[name="deliveryMethod"]').forEach(radio => {
@@ -67,7 +68,7 @@ function setupDeliveryToggle() {
 
   updateDeliverySections();
 }
-
+// Synchronize all input fields and radio button states between desktop and mobile
 function syncForms() {
   const forms = document.querySelectorAll("form.checkout-form");
   if (forms.length < 2) return;
@@ -82,14 +83,14 @@ function syncForms() {
       inputB.addEventListener('input', () => inputA.value = inputB.value);
     }
   }
-
+  // input area we should synchronize
   const fieldNames = [
     'email', 'name', 'address', 'city', 'zip',
     'pickup-name', 'pickup-time',
     'cardname', 'cardnumber', 'expiry', 'cvv'
   ];
   fieldNames.forEach(syncField);
-
+  // Synchronize the option
   const cbA = formA.querySelector('#subscribe');
   const cbB = formB.querySelector('#subscribe');
   if (cbA && cbB) {
@@ -116,14 +117,14 @@ function syncForms() {
     }
   });
 }
-
+// Synchronize the status of all forms when switching delivery methods
 function syncRadioBetweenForms(value) {
   document.querySelectorAll(`input[name="deliveryMethod"][value="${value}"]`).forEach(input => {
     input.checked = true;
   });
   updateDeliverySections();
 }
-
+// Determine the display mode based on the page size
 function setupViewportObserver() {
   let lastWidth = window.innerWidth;
   window.addEventListener('resize', () => {
@@ -134,7 +135,7 @@ function setupViewportObserver() {
     lastWidth = window.innerWidth;
   });
 }
-
+// reload and initialize the page
 window.addEventListener("load", () => {
   renderOrderSummary();
   setupFormSubmitHandler();

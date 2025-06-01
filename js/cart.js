@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const params = new URLSearchParams(window.location.search);
     const productName = params.get('name');
-
+    // check wehther the product exists
     if (!productNameEl || !productPriceEl) return;
 
     const name = productNameEl.textContent.trim();
@@ -92,7 +92,7 @@ function renderCart() {
 
     containerPC.innerHTML = '';
     containerMobile.innerHTML = '';
-
+    // add the number of products user selected to the cart 
     for (const [name, item] of Object.entries(cart)) {
         total += item.price * item.quantity;
         const stockText = item.stock === 'In stock' ? '🟢 In stock' : '🔴 Out of stock';
@@ -192,5 +192,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
-
