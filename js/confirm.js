@@ -28,7 +28,7 @@ function renderOrderSummary() {
       <hr/>
     `;
   }
-  // show the total number
+  // show the total order price
   html += `<div style="margin-top: 20px;"><strong>Total:</strong> $${total.toFixed(2)}</div>`;
   containers.forEach(container => (container.innerHTML = html));
 }
@@ -41,7 +41,7 @@ function setupFormSubmitHandler() {
     });
   });
 }
-// show different chectout form when click different options
+// Display the correct section when a delivery method is selected
 function updateDeliverySections() {
   document.querySelectorAll("form.checkout-form").forEach(form => {
     const selected = form.querySelector('input[name="deliveryMethod"]:checked')?.value;
@@ -83,14 +83,14 @@ function syncForms() {
       inputB.addEventListener('input', () => inputA.value = inputB.value);
     }
   }
-  // input area we should synchronize
+  // List of form fields to synchronise
   const fieldNames = [
     'email', 'name', 'address', 'city', 'zip',
     'pickup-name', 'pickup-time',
     'cardname', 'cardnumber', 'expiry', 'cvv'
   ];
   fieldNames.forEach(syncField);
-  // Synchronize the option
+  // Synchronise the "subscribe" checkbox state
   const cbA = formA.querySelector('#subscribe');
   const cbB = formB.querySelector('#subscribe');
   if (cbA && cbB) {
