@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const params = new URLSearchParams(window.location.search);
     const productName = params.get('name');
-    // check wehther the product exists
+    // check whether the product exists
     if (!productNameEl || !productPriceEl) return;
 
     const name = productNameEl.textContent.trim();
@@ -177,7 +177,7 @@ window.addEventListener('load', () => {
     renderCart();
     updateCartCount();
 });
-// can not go the confirm page if cart is empty
+// can not go to the confirm page if cart is empty
 document.addEventListener('DOMContentLoaded', () => {
     const checkoutDivs = document.querySelectorAll('.checkout');
     checkoutDivs.forEach(div => {

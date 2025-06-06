@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentIndex = 0;
     const totalItems = items.length;
 
-    // create the buttom indicators
+    // create the bottom indicators
     for (let i = 0; i < totalItems; i++) {
       const btn = document.createElement("button");
       btn.classList.add("carousel-indicator");
